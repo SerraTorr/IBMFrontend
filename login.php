@@ -16,8 +16,8 @@ $data = ([
 $jsonstring = makeJsonString($data);
 
 function login($arg){
-    // $url = "https://cloudbackend.mybluemix.net/";
-    $url = "http://localhost:5000/";
+    $url = "https://simple-toolchain-20210413170215384.mybluemix.net";
+    // $url = "http://localhost:5000/";
     
     // $data = array_push($data, $amount)
     $endpoint = $url.'login';

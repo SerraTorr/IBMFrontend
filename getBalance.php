@@ -15,8 +15,8 @@ $jsonstring = makeJsonString($data);
 
 function getBalance($arg)
 {
-    // $url = "https://cloudbackend.mybluemix.net/";
-    $url = "http://localhost:5000/";
+    // $url 
+    $url = "https://simple-toolchain-20210413170215384.mybluemix.net";
     
     // $data = array_push($data, $amount)
     $endpoint = $url.'getBalance';
