@@ -11,7 +11,7 @@ $uname = $_SESSION['uname'];
 $password = $_SESSION['passwd'];
 
 $amt = $_POST['amount'];
-echo $amt;
+// echo $amt;
 
 $data = array("username" => $uname, "password" => $password, "amount" => $amt);
 $jsonstring = makeJsonString($data);
@@ -19,7 +19,9 @@ $jsonstring = makeJsonString($data);
 function addFunds($arg)
 {
     // $url = "https://cloudbackend.mybluemix.net/";
-    $url = "http://localhost:5000/";
+    // $url = "http://localhost:5000/";
+    
+    $url = "https://simple-toolchain-20210413170215384.mybluemix.net";
     
     // $data = array_push($data, $amount)
     $endpoint = $url.'addFunds';
@@ -41,5 +43,5 @@ $balance = json_decode($balance, true);
 
 $_SESSION['balance'] = $balance['balance'];
 
-// header('location: ./landing.php');
+header('location: ./landing.php');
 ?>
