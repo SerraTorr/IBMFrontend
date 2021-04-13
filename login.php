@@ -16,7 +16,7 @@ $data = ([
 $jsonstring = makeJsonString($data);
 
 function login($arg){
-    $url = "https://simple-toolchain-20210413170215384.mybluemix.net";
+    $url = "https://simple-toolchain-20210413170215384.mybluemix.net/";
     // $url = "http://localhost:5000/";
     
     // $data = array_push($data, $amount)
@@ -33,11 +33,21 @@ function login($arg){
 
     return $result;
 }
+$login_response = json_decode(login($jsonstring), true);
 
-if(login($jsonstring)) {session_start();}
-$_SESSION['uname'] = $uname;
-$_SESSION['passwd'] = $password;
+if($login_response['valid']) {
+    session_start();
+    $_SESSION['uname'] = $uname;
+    $_SESSION['passwd'] = $password;
+    $_SESSION['name'] = $login_response['name'];
+    header('location: ./a.php');
+}
+else{
+    session_start();
+    $_SESSION['error'] = 'Please enter valid details';
+    header('location: ./index.php');
+}
 
-header('location: ./a.php');
+
 
 ?>

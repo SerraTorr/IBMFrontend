@@ -20,8 +20,8 @@ function addFunds($arg)
 {
     // $url = "https://cloudbackend.mybluemix.net/";
     // $url = "http://localhost:5000/";
-    
-    $url = "https://simple-toolchain-20210413170215384.mybluemix.net";
+
+    $url = "https://simple-toolchain-20210413170215384.mybluemix.net/";
     
     // $data = array_push($data, $amount)
     $endpoint = $url.'addFunds';

@@ -16,7 +16,7 @@ $jsonstring = makeJsonString($data);
 function getBalance($arg)
 {
     // $url 
-    $url = "https://simple-toolchain-20210413170215384.mybluemix.net";
+    $url = "https://simple-toolchain-20210413170215384.mybluemix.net/";
     
     // $data = array_push($data, $amount)
     $endpoint = $url.'getBalance';

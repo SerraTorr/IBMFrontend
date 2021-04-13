@@ -10,18 +10,21 @@
 
     <title>Zehar</title>
   </head>
-  <body>
+  <body style="background-image: url('./2.jpg');background-repeat: no-repeat;  
+    background-attachment: fixed; 
+  background-size: cover; height: 500px;  ">
     <?php session_start() ?>
-    <div class="offset-md-4 col-md-4 col-8 offset-2" >
+    <div class="offset-md-4 col-md-4 col-8 offset-2"  >
         <div class="row"></div>
-        <form style="margin-top: 30%" class="bg-light px-4 py-4 card" action="./addFundsController.php" method="POST">
-          <center> <h1> <?php echo isset($_SESSION['uname'])?'Welcome '.$_SESSION['uname']:'please login'; ?> </h1> </center>
+        <form style="margin-top: 30%" class="bg-light px-4 py-4 card shadow" action="./addFundsController.php" method="POST">
+          <center> <h1> <?php echo isset($_SESSION['name'])?'Welcome '.$_SESSION['name']:'please login'; ?> </h1> </center>
           <input type="number" name="amount" placeholder="Amount" class="col-12 offset-3 offset-md-0 col-md-6 my-2 mx-auto form-control">
           <!-- <h4 class = "mt-4"> Your balance is : <?php // echo isset($_SESSION['balance'])?$_SESSION['balance']:'Not available please login'; ?></h4> -->
           <input type="submit" name="submit" class="mt-4 col-4 offset-4 btn btn-primary" value=<?php echo isset($_SESSION['uname'])?'"Add Money"':'"Login"'; ?> >
         </form>
         <a href="./a.php"><button class="mt-4 col-4 offset-4 btn btn-primary">Back</button></a>
         <a href="./index.php"><button class="mt-4 col-4 offset-4 btn btn-primary">Logout</button></a>
+        <a href="https://us-south.functions.appdomain.cloud/api/v1/web/180010024%40iitdh.ac.in_dev/hello-world/helloworld"><button class="mt-4 col-4 offset-4 btn btn-primary">Redirect</button></a>
 
 	  </div>
 

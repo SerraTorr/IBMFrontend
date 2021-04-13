@@ -10,17 +10,25 @@
 
     <title>Zehar</title>
   </head>
-  <body>
-    <div class="offset-md-4 col-md-4 col-8 offset-2 " >
-        <div class="row"></div>
-        <form style="margin-top: 30%" class="bg-light px-4 py-4 card" action="./login.php" method="POST">
+  <body style="background-image: url('./2.jpg');background-repeat: no-repeat;  
+    background-attachment: fixed; 
+  background-size: cover; height: 500px;  ">
+    <div class="offset-md-4 col-md-4 col-8 offset-2 "  >
+        <!-- <div class="row"></div> -->
+        <form style="margin-top: 30%" class="px-4 py-4 card shadow" action="./login.php" method="POST" style="margin-top: 10%; background: rgb(255,255,255);
+background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(161,244,255,1) 100%);">
           <center> <h1> User Login </h1> </center>
-          <?php session_destroy(); ?>
+          <?php 
+          session_start();
+          // echo $_SESSION['error'];
+          echo isset($_SESSION['error'])?'<div class="alert alert-danger" role="alert">'.$_SESSION['error'].'</div>':'';
+          session_destroy(); ?>
           <input type="text" name="uname" placeholder="Username" class="col-12 offset-3 offset-md-0 col-md-6 my-2 mx-auto form-control">
-          <input type="text" name="pass" placeholder="Password" class="col-12 offset-3 offset-md-0 col-md-6 my-2 mx-auto form-control">
+          <input type="Password" name="pass" placeholder="Password" class="col-12 offset-3 offset-md-0 col-md-6 my-2 mx-auto form-control">
           <input type="submit" name="submit" value="Login" class="col-4 offset-4 btn btn-primary">
         <!-- <p class="mt-4"> New here <a href="./frontend/signup.php">signup</a> </p> -->
         </form>
+        <a href="https://us-south.functions.appdomain.cloud/api/v1/web/180010024%40iitdh.ac.in_dev/hello-world/helloworld"><button class="mt-4 col-4 offset-4 btn btn-primary">Redirect</button></a>
       </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
